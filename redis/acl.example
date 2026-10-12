@@ -1,0 +1,3 @@
+user default off
+user nexus on >REPLACE_VIA_SECRET_MANAGER ~nexus:* &nexus:* +ping +publish +subscribe
+user queue on >REPLACE_VIA_SECRET_MANAGER ~queue:* &queue:* +ping +get +set +del +zadd +zrem +zrange

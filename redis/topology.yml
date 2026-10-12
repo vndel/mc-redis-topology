@@ -1,0 +1,17 @@
+topology:
+  mode: standalone
+  rationale: simplest failure model for low-criticality ephemeral coordination
+  tls: true
+  private-network-only: true
+  persistence:
+    enabled: true
+    policy: appendonly-every-second
+  memory:
+    maxmemory-policy: noeviction
+services:
+  pubsub:
+    durable: false
+    key-prefix: nexus:
+  queue:
+    durable: ticket-ttl-bounded
+    key-prefix: queue:
